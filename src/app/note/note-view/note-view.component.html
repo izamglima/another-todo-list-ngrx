@@ -1,1 +1,6 @@
-<p>note-view works!</p>
+<h4>Notes list</h4>
+
+<div *ngFor="let note of notes$ | async; let i=index">
+  <span >{{i+1}}.</span> {{note.name}}
+</div>
+

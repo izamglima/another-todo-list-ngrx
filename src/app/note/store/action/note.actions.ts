@@ -9,6 +9,12 @@ export const addNote = createAction(
   (note: Note) => ({note})
 );
 
+export const deleteNote = createAction(
+  '[Note] Delete Note',
+  (note: Note) => ({note})
+);
+
+
 
 
 

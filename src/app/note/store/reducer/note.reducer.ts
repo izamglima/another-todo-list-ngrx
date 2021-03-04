@@ -7,20 +7,22 @@ export interface NoteState {
   notes: Note[]
 }
 
+const note = new Note();
+note.name = 'initial value test';
+
 export const initialState: NoteState = {
-  notes: []
+  notes: [note]
 };
 
 // create a new note rather than mutating the existing note list
 // create a new immutable state and return it to the store
 export const noteReducer = createReducer(
   initialState,
-  on(NoteActions.addNote,
-    (state: NoteState, {note}) =>
+
+  on(NoteActions.addNote, (state: NoteState, {note}) =>
       ({...state,
         notes: [...state.notes, note]
-      })
-  )
+      }))
 );
 
 export function reducer(state: NoteState | undefined, action: Action): any {
