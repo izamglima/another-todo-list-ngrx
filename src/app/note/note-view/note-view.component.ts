@@ -4,6 +4,7 @@ import {Note} from '../../models/note';
 import {select, Store} from '@ngrx/store';
 import {selectNotes} from '../store/selector/note.selectors';
 import {NoteState} from '../store/reducer/note.reducer';
+import {deleteNote} from '../store/action/note.actions';
 
 @Component({
   selector: 'app-note-view',
@@ -18,6 +19,10 @@ export class NoteViewComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  removeNote(note: Note): void {
+    this.store.dispatch(deleteNote(note));
   }
 
 }

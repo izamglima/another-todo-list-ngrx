@@ -18,7 +18,12 @@ export class NoteAddComponent implements OnInit {
 
   addNote(noteName: string): void {
     const note = new Note();
+    note.id = this.getRandomId();
     note.name = noteName;
     this.store.dispatch(addNote(note));
+  }
+
+  getRandomId() {
+    return Math.floor((Math.random()*100)+1);
   }
 }

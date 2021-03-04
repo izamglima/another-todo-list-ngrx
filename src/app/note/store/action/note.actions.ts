@@ -14,6 +14,11 @@ export const deleteNote = createAction(
   (note: Note) => ({note})
 );
 
+export const editNote = createAction(
+  '[Note] Edit Note',
+  (note: Note) => ({note})
+);
+
 
 
 

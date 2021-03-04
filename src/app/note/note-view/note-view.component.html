@@ -1,6 +1,9 @@
-<h4>Notes list</h4>
-
-<div *ngFor="let note of notes$ | async; let i=index">
-  <span >{{i+1}}.</span> {{note.name}}
-</div>
+<section class="notes-container">
+  <div *ngFor="let note of notes$ | async; let i=index" class="notes-box">
+    <span>{{i+1}}. {{note.name}}</span>
+    <footer class="notes-box-footer">
+      <button (click)="removeNote(note)">Remove</button>
+    </footer>
+  </div>
+</section>
 

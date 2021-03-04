@@ -1,0 +1,27 @@
+.notes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  .notes-box {
+    position: relative;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    width: 12rem;
+    padding: 1rem;
+    min-height: 13rem;
+    margin: 0 1rem 2rem 1rem;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    .notes-box-footer {
+      position: relative;
+      text-align: center;
+    }
+
+    span {
+      display: block;
+      min-height: 80%;
+    }
+  }
+}
